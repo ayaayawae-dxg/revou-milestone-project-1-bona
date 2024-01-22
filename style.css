@@ -1,0 +1,118 @@
+:root {
+    --primary: #af2427;
+    --primary-saturated: #d6bcbc;
+    --gray: #ebebeb;
+    --white: #ffffff;
+    --black: #000000;
+    --green: #00bb00;
+    --nav-menu-width: 300px;
+}
+
+* {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--gray);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    /* height: 100%; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.nav-menu {
+    height: 100vh;
+    border-right: 1px solid;
+    width: var(--nav-menu-width);
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu header {
+    background-color: var(--primary);
+    padding: 2rem 1rem 2rem 1rem;
+    color: white;
+}
+
+.nav-menu section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1rem 0 1rem 0;
+    gap: 1rem;
+}
+
+.nav-menu-item {
+    padding-left: 2rem;
+    margin: 0 1rem 0 1rem;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border: 1px solid var(--primary);
+}
+
+.nav-menu-item[open] {
+    padding-bottom: 1rem;
+}
+
+.nav-menu-item-title {
+    padding: 1rem 1rem 1rem 0;
+    list-style-position: outside;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-menu-item-desc {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    gap: 0.5rem;
+}
+
+.nav-menu-item-desc a {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.nav-menu-item-desc a:hover {
+    background: rgb(200, 200, 200);
+}
+
+.nav-menu-item-desc a span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-menu-item-desc a small {
+    background: var(--green);
+    border-radius: 0.75rem;
+    padding: 0.1rem 0.5rem 0.1rem .5rem;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 0.75rem;
+    align-self: center;
+}
+
+.learning-content {
+    flex-direction: column;
+    margin-left: var(--nav-menu-width);
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 480) and (max-width: 768) {}
+
+@media screen and (max-width: 480px) {}
