@@ -14,24 +14,25 @@
 
 <body onload="init()">
 	<div class="wrapper">
-		<nav class="nav-menu">
+		<nav id="nav-menu" class="nav-menu">
 			<header>
-				<a href="/index.html">Back to home page</a>
-				<h2>Dexa Group</h2>
+					<a href="/index.html"><img src="../assets/home.png" alt="home" class="icon" /></a>
+					<h2>Dexa Group</h2>
+					<img src="../assets/burger-menu.svg" alt="toggle-menu" id="toggle-nav-1" class="icon toggle-nav">
 			</header>
 
 			<section>
-				<details class="nav-menu-item">
+				<details class="nav-menu-item" open>
 					<summary class="nav-menu-item-title">
 						Move Together, Grab Opportunities
 					</summary>
 					<div class="nav-menu-item-desc">
 						<a href="our-history.html"><span>Our History</span><small>Done</small></a>
-						<a href="/"><span>Our Global Network</span><small>Done</small></a>
-						<a href="/"><span>Awards</span></a>
+						<a href="our-global-network.html"><span>Our Global Network</span><small>Done</small></a>
+						<a href="awards.html"><span>Awards</span></a>
 					</div>
 				</details>
-				
+
 				<details class="nav-menu-item">
 					<summary class="nav-menu-item-title">
 						From Molecule, to Market
@@ -44,9 +45,18 @@
 				</details>
 			</section>
 		</nav>
-		<main class="learning-content">
-			<h1>Main</h1>
-			
+
+		<main id="learning-content" class="learning-content">
+			<header class="learning-content-header">
+				<div class="learning-content-header-left">
+					<img src="../assets/burger-menu.svg" alt="toggle-menu" id="toggle-nav-2" class="icon toggle-nav">
+					<h1>Our Global Network</h1>
+				</div>
+				<input class="learning-content-search" placeholder="Search . . ." />
+			</header>
+			<section class="learning-content-main">
+				<video src="https://www.dexagroup.com/wp-content/uploads/2022/01/dexagroup-robotic-web.mp4" style="height: min-content; width: 100%;" controls autoplay></video>
+			</section>
 		</main>
 
 		<!-- <footer>
