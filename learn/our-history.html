@@ -14,10 +14,11 @@
 
 <body onload="init()">
 	<div class="wrapper">
-		<nav class="nav-menu">
+		<nav id="nav-menu" class="nav-menu">
 			<header>
-				<a href="/index.html">Back to home page</a>
-				<h2>Dexa Group</h2>
+					<a href="/index.html"><img src="../assets/home.png" alt="home" class="icon" /></a>
+					<h2>Dexa Group</h2>
+					<img src="../assets/burger-menu.svg" alt="toggle-menu" id="toggle-nav-1" class="icon toggle-nav">
 			</header>
 
 			<section>
@@ -45,10 +46,13 @@
 			</section>
 		</nav>
 
-		<main class="learning-content">
+		<main id="learning-content" class="learning-content">
 			<header class="learning-content-header">
-				<h1>Our History</h1>
-				<input placeholder="Search . . ." />
+				<div class="learning-content-header-left">
+					<img src="../assets/burger-menu.svg" alt="toggle-menu" id="toggle-nav-2" class="icon toggle-nav">
+					<h1>Our History</h1>
+				</div>
+				<input class="learning-content-search" placeholder="Search . . ." />
 			</header>
 			<section class="learning-content-main">
 				<h2 style="color: black;">54 Years of Determined Excellence</h2>
@@ -93,7 +97,7 @@
 
 				<article>
 					<h2>Core Values</h2>
-					<img src="../assets/core-values.jpg" alt="core-values" style="max-width: 20rem;"/>
+					<img src="../assets/core-values.jpg" alt="core-values" style="max-width: 20rem;" />
 					<p>All team members at Dexa Group are expected to:</p>
 					<ul>
 						<li style="font-weight: bold;">STRIVE FOR EXCELLENCE</li>

@@ -31,24 +31,37 @@ input {
     outline: none;
 }
 
+.icon {
+    height: 24px;
+    width: 24px;
+}
+
 .wrapper {
     display: flex;
 }
 
 .nav-menu {
     height: 100vh;
-    border-right: 1px solid;
-    width: var(--nav-menu-width);
+    border-right: 1px solid var(--gray);
     left: 0;
+    width: var(--nav-menu-width);
     position: fixed;
-    display: flex;
+    display: none;
     flex-direction: column;
+    z-index: 1000;
+}
+
+.nav-menu.is-active {
+    display: flex;
 }
 
 .nav-menu header {
     background-color: var(--primary);
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-menu section {
@@ -57,6 +70,7 @@ input {
     flex-direction: column;
     padding: 1rem 0 1rem 0;
     gap: 1rem;
+    background-color: white;
 }
 
 .nav-menu-item {
@@ -113,6 +127,19 @@ input {
     align-self: center;
 }
 
+.toggle-nav {
+    height: 24px;
+    width: 24px;
+}
+
+#toggle-nav-1 {
+    display: none;
+}
+
+#toggle-nav-2 {
+    margin-right: 1rem;
+}
+
 .learning-content {
     flex-direction: column;
     margin-left: var(--nav-menu-width);
@@ -122,15 +149,20 @@ input {
 
 .learning-content-header {
     display: flex;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--gray);
     padding: 1rem;
     justify-content: space-between;
     align-items: center;
 }
 
+.learning-content-header-left {
+    display: flex;
+    align-items: center;
+}
+
 .learning-content-header input {
     padding: 0.5rem 1rem 0.5rem 1rem;
-    border: 1px solid black;
+    border: 1px solid var(--gray);
     border-radius: 1rem;
 }
 
@@ -146,11 +178,13 @@ input {
     margin: 3rem 0 3rem 0;
 }
 
-.learning-content-main h1, .learning-content-main h2 {
+.learning-content-main h1,
+.learning-content-main h2 {
     color: var(--primary);
 }
 
-.learning-content-main p, .learning-content-main ul {
+.learning-content-main p,
+.learning-content-main ul {
     line-height: 2rem;
 }
 
@@ -158,6 +192,14 @@ input {
     width: 100%;
 }
 
-@media screen and (min-width: 480) and (max-width: 768) {}
-
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 768px) {
+    #toggle-nav-1 {
+        display: block;
+    }
+    .learning-content {
+        margin-left: 0;
+    }
+    .learning-content-search {
+        display: none;
+    }
+}
