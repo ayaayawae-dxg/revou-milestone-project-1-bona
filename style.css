@@ -127,7 +127,7 @@ section.main-header .content {
 }
 
 section.main-header .main-header-title h1 {
-    line-height: 3remw;
+    line-height: 3rem;
 }
 
 section.main-header .main-header-title button {
@@ -164,6 +164,11 @@ section.our-partner .content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
+}
+
+section.our-partner .content h1 {
+    color: var(--primary);
 }
 
 section.our-partner .content .our-partner-logo {
@@ -174,12 +179,62 @@ section.our-partner .content .our-partner-logo {
     width: 100%;
 }
 
-section.our-partner .content .our-partner-logo img{
+section.our-partner .content .our-partner-logo img {
     width: 100%;
 }
 
-section.our-partner h1 {
-    color: var(--primary);
+section.learning-path {
+    padding: 3rem 1rem 3rem 1rem;
+    background-color: var(--primary);
+}
+
+section.learning-path .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 50rem;
+    margin: 0 auto 0 auto;
+}
+
+section.learning-path .content h1 {
+    color: var(--white);
+}
+
+section.learning-path .content .card-container {
+    display: flex;
+    gap: 1rem;
+}
+
+section.learning-path .content .card-container .card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+section.learning-path .content .card-container .card:hover {
+    transition: 0.3s;
+    background-color: var(--primary-saturated);
+    color: white;
+}
+
+section.learning-path .content .card-container .card .card-img{
+    padding: 3.5rem;
+    border-bottom: 1px solid var(--primary);
+    text-align: center;
+}
+
+section.learning-path .content .card-container .card .card-img img{
+    height: 100px;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+}
+
+section.learning-path .content .card-container .card .card-text{
+    padding: 0 1rem 0 1rem;
 }
 
 /* ================================================================ */
@@ -353,5 +408,15 @@ section.our-partner h1 {
     section.our-partner .content .our-partner-logo {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    section.learning-path .content .card-container {
+        flex-direction: column;
+    }
+
+    section.learning-path .content .card-container .card .card-img{
+        padding: 2rem;
+        border-bottom: 1px solid var(--primary);
+        text-align: center;
     }
 }
