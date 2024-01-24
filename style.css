@@ -43,12 +43,18 @@ input {
 /* ================================================================ */
 
 .nav-main {
+    background: var(--primary);
+    padding: 0 1rem 0 1rem;
+}
+
+.nav-main .content {
+    max-width: 70rem;
     display: flex;
     flex: 1;
-    background: var(--primary);
-    padding: 0.5rem 6rem 0.5rem 6rem;
+    padding: 0.5rem 0 0.5rem 0;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto 0 auto;
 }
 
 .nav-main-left {
@@ -114,7 +120,6 @@ input {
 section.main-header {
     position: relative;
     padding: 3rem 1rem 3rem 1rem;
-    backdrop-filter: blur(100px);
 }
 
 section.main-header .content {
@@ -152,7 +157,7 @@ section.main-header .background {
     background-position: center;
     background-image: url("./assets/pattern.jpg");
     background-size: cover;
-    filter: opacity(0.3);
+    filter: opacity(0.11);
 }
 
 section.our-partner {
@@ -414,6 +419,32 @@ footer {
 
     .learning-content-search {
         display: none;
+    }
+
+    .nav-main {
+        background: var(--primary);
+        padding: 0 0.5rem 0 0.5rem;
+    }    
+
+    .nav-main .nav-main-list, .nav-main-left {
+        gap: 0.5rem;
+    }
+    
+    .nav-main-left img {
+        width: 50px;
+        height: auto;
+    }
+
+    .nav-main-list a {
+        font-size: 0.75rem;
+    }
+
+    .nav-main-right button {
+        font-size: 0.75rem;
+    }
+
+    section.main-header .content {
+        flex-direction: column-reverse;
     }
 
     section.our-partner .content .our-partner-logo {
