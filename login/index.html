@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+	<title>Milestone Project 1 - Login</title>
+</head>
+
+<body onload="init()">
+	<div class="login-wrapper">
+		<div class="logo">
+			<img src="../assets/digicamp-logo-original.png" />
+		</div>
+		<section class="login-section">
+			<div class="form-wrapper">
+				<h1>DIGICAMP</h1>
+				<form id="login-form">
+					<div>
+						<input name="email" type="email" placeholder="Email" required/>
+						<input name="password" type="password" placeholder="Password" required pattern="(?=.*\d)(?=.*\W).{8,}"/>
+					</div>
+					<button type="submit" id="login-btn">Login</button>
+				</form>
+			</div>
+		</section>
+	</div>
+	<script src="../script.js"></script>
+</body>
+
+</html>
